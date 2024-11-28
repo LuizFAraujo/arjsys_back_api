@@ -1,0 +1,11 @@
+# .gitattributes - Configuração de finais de linha
+
+# A linha abaixo faz o seguinte:
+# - 'text=auto': O Git detecta automaticamente se o arquivo é de texto ou binário. 
+#   Se for de texto, ele aplica as regras de final de linha configuradas.
+# - 'eol=lf': Força o Git a usar o final de linha LF (Line Feed) no repositório,
+#   independentemente do sistema operacional (como Windows, Linux, etc.).
+# Isso garante que os arquivos de texto no repositório sempre tenham finais de linha consistentes, usando LF.
+# Se o final or CRLF, seria apenas para ambiente windows.
+
+* text=auto eol=lf
