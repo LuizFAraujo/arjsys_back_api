@@ -28,7 +28,7 @@ dist-ssr
 **/obj/
 
 # Ignorar o banco SQLite
-**/*.db
+**/*.db*
 **/*.sqlite
 **/*.sqlite3
 

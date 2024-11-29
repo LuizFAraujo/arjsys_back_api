@@ -1,8 +1,15 @@
+using ArjSys.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
 
+// Configuração do banco de dados SQLite
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
 
 
 // Adiciona a configuração do Swagger (Documentação da API)
