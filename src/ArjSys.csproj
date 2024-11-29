@@ -9,9 +9,7 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Data\DataSeed\" />
-    <Folder Include="Data\Repositories\" />
     <Folder Include="DTOs\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
