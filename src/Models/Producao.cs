@@ -4,7 +4,9 @@ namespace ArjSys.Models;
 
 public class Producao : BaseEntity
 {
-    public string Produto { get; set; } = string.Empty;
+    public string ProdutoNome { get; set; } = string.Empty;
     public int Quantidade { get; set; }
     public DateTime DataProducao { get; set; }
+    public int ProdutoId { get; set; }
+    public required Produto Produto { get; set; }
 }

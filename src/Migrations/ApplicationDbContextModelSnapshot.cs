@@ -36,12 +36,53 @@ namespace ArjSys.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("ProdutoId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Quantidade")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ProdutoId");
+
                     b.ToTable("Estoques");
+                });
+
+            modelBuilder.Entity("ArjSys.Models.ItemVenda", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ProdutoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("VendaId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.HasIndex("VendaId");
+
+                    b.ToTable("ItensVenda");
                 });
 
             modelBuilder.Entity("ArjSys.Models.Producao", b =>
@@ -62,7 +103,10 @@ namespace ArjSys.Migrations
                     b.Property<DateTime>("DataProducao")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Produto")
+                    b.Property<int>("ProdutoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProdutoNome")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -70,6 +114,8 @@ namespace ArjSys.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProdutoId");
 
                     b.ToTable("Producoes");
                 });
@@ -146,16 +192,55 @@ namespace ArjSys.Migrations
                     b.Property<DateTime>("DataVenda")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Produto")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("TEXT");
-
                     b.HasKey("Id");
 
                     b.ToTable("Vendas");
+                });
+
+            modelBuilder.Entity("ArjSys.Models.Estoque", b =>
+                {
+                    b.HasOne("ArjSys.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Produto");
+                });
+
+            modelBuilder.Entity("ArjSys.Models.ItemVenda", b =>
+                {
+                    b.HasOne("ArjSys.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ArjSys.Models.Venda", "Venda")
+                        .WithMany("ItensVenda")
+                        .HasForeignKey("VendaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Produto");
+
+                    b.Navigation("Venda");
+                });
+
+            modelBuilder.Entity("ArjSys.Models.Producao", b =>
+                {
+                    b.HasOne("ArjSys.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Produto");
+                });
+
+            modelBuilder.Entity("ArjSys.Models.Venda", b =>
+                {
+                    b.Navigation("ItensVenda");
                 });
 #pragma warning restore 612, 618
         }
