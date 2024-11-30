@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Id": 1,
+    "Ativo": true,
+    "DataCriacao": "2024-01-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Produto 1",
+    "Preco": 10.0
+  },
+  {
+    "Id": 2,
+    "Ativo": true,
+    "DataCriacao": "2024-01-02T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Produto 2",
+    "Preco": 20.0
+  },
+  {
+    "Id": 3,
+    "Ativo": true,
+    "DataCriacao": "2024-01-03T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Produto 3",
+    "Preco": 30.0
+  }
+]

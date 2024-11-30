@@ -8,5 +8,5 @@ public class Producao : BaseEntity
     public int Quantidade { get; set; }
     public DateTime DataProducao { get; set; }
     public int ProdutoId { get; set; }
-    public required Produto Produto { get; set; }
+    public Produto? Produto { get; set; }
 }

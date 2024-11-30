@@ -4,15 +4,26 @@ using ArjSys.Data.Repositories;
 using ArjSys.Services.Interfaces;
 using ArjSys.Services;
 using Microsoft.EntityFrameworkCore;
+using ArjSys.Data.DataSeed;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configuração do logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
 builder.Services.AddControllers();
 
 // Configuração do banco de dados SQLite
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
+           .EnableSensitiveDataLogging()
+           .UseLoggerFactory(LoggerFactory.Create(builder =>
+           {
+               builder
+                   .AddConsole()
+                   .AddFilter(level => level >= LogLevel.Information);
+           }))
 );
 
 // Registro dos repositórios
@@ -40,6 +51,7 @@ builder.Services.AddSwaggerGen(); // Gera o Swagger UI
 var app = builder.Build();
 
 // Habilita o Swagger apenas no ambiente de desenvolvimento
+// Popula o banco de dados, para testes
 if (app.Environment.IsDevelopment())
 {
     // Gera a documentação Swagger
@@ -47,6 +59,13 @@ if (app.Environment.IsDevelopment())
 
     // Configura o Swagger UI com o endpoint especificado
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ArjSYS API v1"));
+
+    // Seed de dados
+    using (var scope = app.Services.CreateScope())
+    {
+        var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        DataSeed.SeedAll(context);
+    }
 }
 
 // Configura o pipeline de requisições HTTP

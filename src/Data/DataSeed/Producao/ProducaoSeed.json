@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Id": 1,
+    "Ativo": true,
+    "DataCriacao": "2024-01-01T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Produto 1",
+    "Quantidade": 50,
+    "DataProducao": "2024-01-01T00:00:00",
+    "ProdutoId": 1
+  },
+  {
+    "Id": 2,
+    "Ativo": true,
+    "DataCriacao": "2024-01-02T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Produto 2",
+    "Quantidade": 100,
+    "DataProducao": "2024-01-02T00:00:00",
+    "ProdutoId": 2
+  },
+  {
+    "Id": 3,
+    "Ativo": true,
+    "DataCriacao": "2024-01-03T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Produto 3",
+    "Quantidade": 150,
+    "DataProducao": "2024-01-03T00:00:00",
+    "ProdutoId": 3
+  }
+]

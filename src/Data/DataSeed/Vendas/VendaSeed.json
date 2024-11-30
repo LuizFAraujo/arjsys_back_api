@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Id": 1,
+    "Ativo": true,
+    "DataCriacao": "2024-01-01T00:00:00",
+    "DataAlteracao": null,
+    "ClienteNome": "Cliente 1",
+    "DataVenda": "2024-01-01T00:00:00"
+  },
+  {
+    "Id": 2,
+    "Ativo": true,
+    "DataCriacao": "2024-01-02T00:00:00",
+    "DataAlteracao": null,
+    "ClienteNome": "Cliente 2",
+    "DataVenda": "2024-01-02T00:00:00"
+  },
+  {
+    "Id": 3,
+    "Ativo": true,
+    "DataCriacao": "2024-01-03T00:00:00",
+    "DataAlteracao": null,
+    "ClienteNome": "Cliente 3",
+    "DataVenda": "2024-01-03T00:00:00"
+  }
+]
