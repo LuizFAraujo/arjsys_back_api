@@ -10,7 +10,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Data\DataSeed\" />
     <Folder Include="DTOs\" />
-    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>

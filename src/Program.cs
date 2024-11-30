@@ -1,4 +1,8 @@
 using ArjSys.Data;
+using ArjSys.Data.Repositories.Interfaces;
+using ArjSys.Data.Repositories;
+using ArjSys.Services.Interfaces;
+using ArjSys.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +14,23 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+// Registro dos repositórios
+builder.Services.AddScoped<IEstoqueRepository, EstoqueRepository>();
+builder.Services.AddScoped<IItemVendaRepository, ItemVendaRepository>();
+builder.Services.AddScoped<IProducaoRepository, ProducaoRepository>();
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+builder.Services.AddScoped<IProjetoRepository, ProjetoRepository>();
+builder.Services.AddScoped<IVendaRepository, VendaRepository>();
+
+// Registro dos serviços
+builder.Services.AddScoped<IEstoqueService, EstoqueService>();
+builder.Services.AddScoped<IItemVendaService, ItemVendaService>();
+builder.Services.AddScoped<IProducaoService, ProducaoService>();
+builder.Services.AddScoped<IProdutoService, ProdutoService>();
+builder.Services.AddScoped<IProjetoService, ProjetoService>();
+builder.Services.AddScoped<IVendaService, VendaService>();
+
 
 
 // Adiciona a configuração do Swagger (Documentação da API)
