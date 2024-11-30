@@ -1,4 +1,5 @@
-﻿using ArjSys.Models;
+﻿using ArjSys.DTOs;
+using ArjSys.Models;
 using ArjSys.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,19 +29,38 @@ public class ProdutosController(IProdutoService produtoService) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> Post(Produto produto)
+    public async Task<ActionResult> Post([FromBody] CreateProdutoDto createProdutoDto)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        var produto = new Produto
+        {
+            Nome = createProdutoDto.Nome,
+            Preco = createProdutoDto.Preco
+        };
+
         await _produtoService.AddAsync(produto);
         return CreatedAtAction(nameof(Get), new { id = produto.Id }, produto);
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult> Put(int id, Produto produto)
+    public async Task<ActionResult> Put(int id, [FromBody] UpdateProdutoDto updateProdutoDto)
     {
-        if (id != produto.Id)
+        if (id != updateProdutoDto.Id || !ModelState.IsValid)
         {
-            return BadRequest();
+            return BadRequest(ModelState);
         }
+
+        var produto = new Produto
+        {
+            Id = updateProdutoDto.Id,
+            Nome = updateProdutoDto.Nome,
+            Preco = updateProdutoDto.Preco
+        };
+
         await _produtoService.UpdateAsync(produto);
         return NoContent();
     }

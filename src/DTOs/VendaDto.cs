@@ -8,7 +8,7 @@ public class CreateVendaDto
     public DateTime DataVenda { get; set; }
 
     [Required]
-    public required List<CreateItemVendaDto> ItensVenda { get; set; }
+    public List<CreateItemVendaDto> ItensVenda { get; set; } = [];
 }
 
 public class UpdateVendaDto
@@ -20,5 +20,5 @@ public class UpdateVendaDto
     public DateTime DataVenda { get; set; }
 
     [Required]
-    public required List<UpdateItemVendaDto> ItensVenda { get; set; }
+    public List<UpdateItemVendaDto> ItensVenda { get; set; } = [];
 }

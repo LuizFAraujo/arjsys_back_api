@@ -12,7 +12,7 @@ public class CreateEstoqueDto
     public int Quantidade { get; set; }
 
     [Required]
-    public DateTime DataRecebimento { get; set; }
+    public int ProdutoId { get; set; }
 }
 
 public class UpdateEstoqueDto
@@ -28,5 +28,5 @@ public class UpdateEstoqueDto
     public int Quantidade { get; set; }
 
     [Required]
-    public DateTime DataRecebimento { get; set; }
+    public int ProdutoId { get; set; }
 }

@@ -1,4 +1,5 @@
-﻿using ArjSys.Models;
+﻿using ArjSys.DTOs;
+using ArjSys.Models;
 using ArjSys.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,19 +29,38 @@ public class ProjetosController(IProjetoService projetoService) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> Post(Projeto projeto)
+    public async Task<ActionResult> Post([FromBody] CreateProjetoDto createProjetoDto)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        var projeto = new Projeto
+        {
+            Nome = createProjetoDto.Nome,
+            DataInicio = createProjetoDto.DataInicio
+        };
+
         await _projetoService.AddAsync(projeto);
         return CreatedAtAction(nameof(Get), new { id = projeto.Id }, projeto);
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult> Put(int id, Projeto projeto)
+    public async Task<ActionResult> Put(int id, [FromBody] UpdateProjetoDto updateProjetoDto)
     {
-        if (id != projeto.Id)
+        if (id != updateProjetoDto.Id || !ModelState.IsValid)
         {
-            return BadRequest();
+            return BadRequest(ModelState);
         }
+
+        var projeto = new Projeto
+        {
+            Id = updateProjetoDto.Id,
+            Nome = updateProjetoDto.Nome,
+            DataInicio = updateProjetoDto.DataInicio
+        };
+
         await _projetoService.UpdateAsync(projeto);
         return NoContent();
     }

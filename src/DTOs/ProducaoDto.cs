@@ -5,13 +5,17 @@ namespace ArjSys.DTOs;
 public class CreateProducaoDto
 {
     [Required]
-    public int ProdutoId { get; set; }
+    [StringLength(100)]
+    public required string ProdutoNome { get; set; }
+
+    [Range(0, int.MaxValue)]
+    public int Quantidade { get; set; }
 
     [Required]
     public DateTime DataProducao { get; set; }
 
-    [Range(1, int.MaxValue)]
-    public int Quantidade { get; set; }
+    [Required]
+    public int ProdutoId { get; set; }
 }
 
 public class UpdateProducaoDto
@@ -20,11 +24,15 @@ public class UpdateProducaoDto
     public int Id { get; set; }
 
     [Required]
-    public int ProdutoId { get; set; }
+    [StringLength(100)]
+    public required string ProdutoNome { get; set; }
+
+    [Range(0, int.MaxValue)]
+    public int Quantidade { get; set; }
 
     [Required]
     public DateTime DataProducao { get; set; }
 
-    [Range(1, int.MaxValue)]
-    public int Quantidade { get; set; }
+    [Required]
+    public int ProdutoId { get; set; }
 }
