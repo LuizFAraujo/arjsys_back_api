@@ -2,37 +2,58 @@
 using ArjSys.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ArjSys.Controllers
+namespace ArjSys.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class VendasController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class VendasController(IVendaService vendaService) : ControllerBase
+    private readonly IVendaService _vendaService;
+
+    public VendasController(IVendaService vendaService)
     {
-        private readonly IVendaService _vendaService = vendaService;
+        _vendaService = vendaService;
+    }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Venda>>> Get()
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Venda>>> Get()
+    {
+        return Ok(await _vendaService.GetAllAsync());
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Venda>> Get(int id)
+    {
+        var venda = await _vendaService.GetByIdAsync(id);
+        if (venda == null)
         {
-            return Ok(await _vendaService.GetAllAsync());
+            return NotFound();
         }
+        return Ok(venda);
+    }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Venda>> Get(int id)
+    [HttpPost]
+    public async Task<ActionResult> Post(Venda venda)
+    {
+        await _vendaService.AddAsync(venda);
+        return CreatedAtAction(nameof(Get), new { id = venda.Id }, venda);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult> Put(int id, Venda venda)
+    {
+        if (id != venda.Id)
         {
-            var venda = await _vendaService.GetByIdAsync(id);
-            if (venda == null)
-            {
-                return NotFound();
-            }
-            return Ok(venda);
+            return BadRequest();
         }
+        await _vendaService.UpdateAsync(venda);
+        return NoContent();
+    }
 
-        [HttpPost]
-        public async Task<ActionResult> Post(Venda venda)
-        {
-            await _vendaService.AddAsync(venda);
-            return CreatedAtAction(nameof(Get), new { id = venda.Id }, venda);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<ActionResult
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete(int id)
+    {
+        await _vendaService.DeleteAsync(id);
+        return NoContent();
+    }
+}

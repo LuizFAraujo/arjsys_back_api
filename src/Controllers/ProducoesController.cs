@@ -2,54 +2,53 @@
 using ArjSys.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ArjSys.Controllers
+namespace ArjSys.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class ProducoesController(IProducaoService producaoService) : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProducoesController(IProducaoService producaoService) : ControllerBase
+    private readonly IProducaoService _producaoService = producaoService;
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Producao>>> Get()
     {
-        private readonly IProducaoService _producaoService = producaoService;
+        return Ok(await _producaoService.GetAllAsync());
+    }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Producao>>> Get()
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Producao>> Get(int id)
+    {
+        var producao = await _producaoService.GetByIdAsync(id);
+        if (producao == null)
         {
-            return Ok(await _producaoService.GetAllAsync());
+            return NotFound();
         }
+        return Ok(producao);
+    }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Producao>> Get(int id)
-        {
-            var producao = await _producaoService.GetByIdAsync(id);
-            if (producao == null)
-            {
-                return NotFound();
-            }
-            return Ok(producao);
-        }
+    [HttpPost]
+    public async Task<ActionResult> Post(Producao producao)
+    {
+        await _producaoService.AddAsync(producao);
+        return CreatedAtAction(nameof(Get), new { id = producao.Id }, producao);
+    }
 
-        [HttpPost]
-        public async Task<ActionResult> Post(Producao producao)
+    [HttpPut("{id}")]
+    public async Task<ActionResult> Put(int id, Producao producao)
+    {
+        if (id != producao.Id)
         {
-            await _producaoService.AddAsync(producao);
-            return CreatedAtAction(nameof(Get), new { id = producao.Id }, producao);
+            return BadRequest();
         }
+        await _producaoService.UpdateAsync(producao);
+        return NoContent();
+    }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, Producao producao)
-        {
-            if (id != producao.Id)
-            {
-                return BadRequest();
-            }
-            await _producaoService.UpdateAsync(producao);
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
-        {
-            await _producaoService.DeleteAsync(id);
-            return NoContent();
-        }
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete(int id)
+    {
+        await _producaoService.DeleteAsync(id);
+        return NoContent();
     }
 }

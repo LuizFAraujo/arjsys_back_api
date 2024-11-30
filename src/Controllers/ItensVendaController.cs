@@ -2,54 +2,53 @@
 using ArjSys.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ArjSys.Controllers
+namespace ArjSys.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class ItensVendaController(IItemVendaService itemVendaService) : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ItensVendaController(IItemVendaService itemVendaService) : ControllerBase
+    private readonly IItemVendaService _itemVendaService = itemVendaService;
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<ItemVenda>>> Get()
     {
-        private readonly IItemVendaService _itemVendaService = itemVendaService;
+        return Ok(await _itemVendaService.GetAllAsync());
+    }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<ItemVenda>>> Get()
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ItemVenda>> Get(int id)
+    {
+        var itemVenda = await _itemVendaService.GetByIdAsync(id);
+        if (itemVenda == null)
         {
-            return Ok(await _itemVendaService.GetAllAsync());
+            return NotFound();
         }
+        return Ok(itemVenda);
+    }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ItemVenda>> Get(int id)
-        {
-            var itemVenda = await _itemVendaService.GetByIdAsync(id);
-            if (itemVenda == null)
-            {
-                return NotFound();
-            }
-            return Ok(itemVenda);
-        }
+    [HttpPost]
+    public async Task<ActionResult> Post(ItemVenda itemVenda)
+    {
+        await _itemVendaService.AddAsync(itemVenda);
+        return CreatedAtAction(nameof(Get), new { id = itemVenda.Id }, itemVenda);
+    }
 
-        [HttpPost]
-        public async Task<ActionResult> Post(ItemVenda itemVenda)
+    [HttpPut("{id}")]
+    public async Task<ActionResult> Put(int id, ItemVenda itemVenda)
+    {
+        if (id != itemVenda.Id)
         {
-            await _itemVendaService.AddAsync(itemVenda);
-            return CreatedAtAction(nameof(Get), new { id = itemVenda.Id }, itemVenda);
+            return BadRequest();
         }
+        await _itemVendaService.UpdateAsync(itemVenda);
+        return NoContent();
+    }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, ItemVenda itemVenda)
-        {
-            if (id != itemVenda.Id)
-            {
-                return BadRequest();
-            }
-            await _itemVendaService.UpdateAsync(itemVenda);
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
-        {
-            await _itemVendaService.DeleteAsync(id);
-            return NoContent();
-        }
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete(int id)
+    {
+        await _itemVendaService.DeleteAsync(id);
+        return NoContent();
     }
 }

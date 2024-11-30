@@ -4,3 +4,17 @@ GET {{ArjSys_HostAddress}}/swagger/
 Accept: application/json
 
 ### 
+
+
+### Listar todos os produtos
+GET {{ArjSys_HostAddress}}/api/produtos
+Accept: application/json
+
+### Adicionar um novo produto
+POST {{ArjSys_HostAddress}}/api/produtos
+Content-Type: application/json
+
+{
+    "nome": "Novo Produto",
+    "preco": 99.99
+}
