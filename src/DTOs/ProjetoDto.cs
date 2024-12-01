@@ -10,6 +10,8 @@ public class CreateProjetoDto
 
     [Required]
     public DateTime DataInicio { get; set; }
+
+    public DateTime? DataFim { get; set; }
 }
 
 public class UpdateProjetoDto
@@ -23,4 +25,6 @@ public class UpdateProjetoDto
 
     [Required]
     public DateTime DataInicio { get; set; }
+
+    public DateTime? DataFim { get; set; }
 }

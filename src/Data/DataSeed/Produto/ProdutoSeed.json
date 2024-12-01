@@ -2,25 +2,241 @@
   {
     "Id": 1,
     "Ativo": true,
-    "DataCriacao": "2024-01-01T00:00:00",
+    "DataCriacao": "2021-03-10T00:00:00",
     "DataAlteracao": null,
-    "Nome": "Produto 1",
-    "Preco": 10.0
+    "Nome": "Serra Circular de Bancada 350mm",
+    "Preco": 1500.0
   },
   {
     "Id": 2,
     "Ativo": true,
-    "DataCriacao": "2024-01-02T00:00:00",
+    "DataCriacao": "2021-04-05T00:00:00",
     "DataAlteracao": null,
-    "Nome": "Produto 2",
-    "Preco": 20.0
+    "Nome": "Desfibradora de Madeira Portátil",
+    "Preco": 12000.0
   },
   {
     "Id": 3,
-    "Ativo": true,
-    "DataCriacao": "2024-01-03T00:00:00",
+    "Ativo": false,
+    "DataCriacao": "2021-05-10T00:00:00",
     "DataAlteracao": null,
-    "Nome": "Produto 3",
-    "Preco": 30.0
+    "Nome": "Triturador de Galhos X3",
+    "Preco": 25000.0
+  },
+  {
+    "Id": 4,
+    "Ativo": true,
+    "DataCriacao": "2021-06-20T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Lixadeira Industrial de Banda",
+    "Preco": 8500.0
+  },
+  {
+    "Id": 5,
+    "Ativo": true,
+    "DataCriacao": "2021-07-15T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra Fita Vertical 450mm",
+    "Preco": 20000.0
+  },
+  {
+    "Id": 6,
+    "Ativo": false,
+    "DataCriacao": "2021-08-25T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Prensa Hidráulica de Reciclagem",
+    "Preco": 35000.0
+  },
+  {
+    "Id": 7,
+    "Ativo": true,
+    "DataCriacao": "2021-09-30T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Cortadora de Papelão Industrial",
+    "Preco": 4500.0
+  },
+  {
+    "Id": 8,
+    "Ativo": true,
+    "DataCriacao": "2021-10-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Triturador de Plástico Granulado",
+    "Preco": 22000.0
+  },
+  {
+    "Id": 9,
+    "Ativo": false,
+    "DataCriacao": "2021-11-02T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Fresadora Vertical CNC",
+    "Preco": 55000.0
+  },
+  {
+    "Id": 10,
+    "Ativo": true,
+    "DataCriacao": "2021-11-25T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Máquina de Reciclagem de Pneus",
+    "Preco": 85000.0
+  },
+  {
+    "Id": 11,
+    "Ativo": true,
+    "DataCriacao": "2021-12-15T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Furadeira de Coluna 1200mm",
+    "Preco": 8500.0
+  },
+  {
+    "Id": 12,
+    "Ativo": true,
+    "DataCriacao": "2022-01-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Desbaste de Madeira - Combinada",
+    "Preco": 13000.0
+  },
+  {
+    "Id": 13,
+    "Ativo": false,
+    "DataCriacao": "2022-02-05T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Empilhadeira Elétrica 5000kg",
+    "Preco": 45000.0
+  },
+  {
+    "Id": 14,
+    "Ativo": true,
+    "DataCriacao": "2022-03-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra de Madeira com Roldana",
+    "Preco": 4000.0
+  },
+  {
+    "Id": 15,
+    "Ativo": true,
+    "DataCriacao": "2022-03-20T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Triturador de Vidros para Reciclagem",
+    "Preco": 30000.0
+  },
+  {
+    "Id": 16,
+    "Ativo": false,
+    "DataCriacao": "2022-04-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Furadeira Industrial 1500W",
+    "Preco": 4500.0
+  },
+  {
+    "Id": 17,
+    "Ativo": true,
+    "DataCriacao": "2022-05-05T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Triturador de Metal 100HP",
+    "Preco": 65000.0
+  },
+  {
+    "Id": 18,
+    "Ativo": true,
+    "DataCriacao": "2022-06-25T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Cortadora de Madeira 650mm",
+    "Preco": 9000.0
+  },
+  {
+    "Id": 19,
+    "Ativo": false,
+    "DataCriacao": "2022-07-20T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Recicladora de Papel Descartável",
+    "Preco": 25000.0
+  },
+  {
+    "Id": 20,
+    "Ativo": true,
+    "DataCriacao": "2022-08-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra de Corte para Plástico",
+    "Preco": 5500.0
+  },
+  {
+    "Id": 21,
+    "Ativo": true,
+    "DataCriacao": "2022-09-15T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra Tico-Tico Elétrica 500W",
+    "Preco": 1000.0
+  },
+  {
+    "Id": 22,
+    "Ativo": false,
+    "DataCriacao": "2022-10-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Prensa para Reciclagem de Plástico",
+    "Preco": 28000.0
+  },
+  {
+    "Id": 23,
+    "Ativo": true,
+    "DataCriacao": "2022-11-05T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Triturador de Alimentos Orgânicos",
+    "Preco": 11000.0
+  },
+  {
+    "Id": 24,
+    "Ativo": true,
+    "DataCriacao": "2022-12-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra para Reciclagem de Madeira",
+    "Preco": 16000.0
+  },
+  {
+    "Id": 25,
+    "Ativo": true,
+    "DataCriacao": "2023-01-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Triturador de Alumínio",
+    "Preco": 30000.0
+  },
+  {
+    "Id": 26,
+    "Ativo": false,
+    "DataCriacao": "2023-02-15T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra de Cinta Horizontal",
+    "Preco": 22000.0
+  },
+  {
+    "Id": 27,
+    "Ativo": true,
+    "DataCriacao": "2023-03-30T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Máquina de Reciclagem de Garrafas PET",
+    "Preco": 48000.0
+  },
+  {
+    "Id": 28,
+    "Ativo": true,
+    "DataCriacao": "2023-04-20T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra de Bancada Profissional",
+    "Preco": 5000.0
+  },
+  {
+    "Id": 29,
+    "Ativo": true,
+    "DataCriacao": "2023-05-15T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Desintegrador de Restos de Madeira",
+    "Preco": 20000.0
+  },
+  {
+    "Id": 30,
+    "Ativo": false,
+    "DataCriacao": "2023-06-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Moinho de Impacto para Reciclagem",
+    "Preco": 70000.0
   }
 ]

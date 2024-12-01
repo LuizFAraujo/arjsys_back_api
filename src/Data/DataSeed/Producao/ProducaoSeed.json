@@ -2,31 +2,301 @@
   {
     "Id": 1,
     "Ativo": true,
-    "DataCriacao": "2024-01-01T00:00:00",
+    "DataCriacao": "2021-03-10T00:00:00",
     "DataAlteracao": null,
-    "ProdutoNome": "Produto 1",
+    "ProdutoNome": "Serra Circular de Bancada 350mm",
     "Quantidade": 50,
-    "DataProducao": "2024-01-01T00:00:00",
+    "DataProducao": "2021-03-11T00:00:00",
     "ProdutoId": 1
   },
   {
     "Id": 2,
     "Ativo": true,
-    "DataCriacao": "2024-01-02T00:00:00",
+    "DataCriacao": "2021-04-05T00:00:00",
     "DataAlteracao": null,
-    "ProdutoNome": "Produto 2",
-    "Quantidade": 100,
-    "DataProducao": "2024-01-02T00:00:00",
+    "ProdutoNome": "Desfibradora de Madeira Portátil",
+    "Quantidade": 65,
+    "DataProducao": "2021-04-06T00:00:00",
     "ProdutoId": 2
   },
   {
     "Id": 3,
-    "Ativo": true,
-    "DataCriacao": "2024-01-03T00:00:00",
+    "Ativo": false,
+    "DataCriacao": "2021-05-10T00:00:00",
     "DataAlteracao": null,
-    "ProdutoNome": "Produto 3",
-    "Quantidade": 150,
-    "DataProducao": "2024-01-03T00:00:00",
+    "ProdutoNome": "Triturador de Galhos X3",
+    "Quantidade": 30,
+    "DataProducao": "2021-05-11T00:00:00",
     "ProdutoId": 3
+  },
+  {
+    "Id": 4,
+    "Ativo": true,
+    "DataCriacao": "2021-06-20T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Lixadeira Industrial de Banda",
+    "Quantidade": 90,
+    "DataProducao": "2021-06-21T00:00:00",
+    "ProdutoId": 4
+  },
+  {
+    "Id": 5,
+    "Ativo": true,
+    "DataCriacao": "2021-07-15T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Serra Fita Vertical 450mm",
+    "Quantidade": 78,
+    "DataProducao": "2021-07-16T00:00:00",
+    "ProdutoId": 5
+  },
+  {
+    "Id": 6,
+    "Ativo": false,
+    "DataCriacao": "2021-08-25T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Prensa Hidráulica de Reciclagem",
+    "Quantidade": 50,
+    "DataProducao": "2021-08-26T00:00:00",
+    "ProdutoId": 6
+  },
+  {
+    "Id": 7,
+    "Ativo": true,
+    "DataCriacao": "2021-09-30T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Cortadora de Papelão Industrial",
+    "Quantidade": 63,
+    "DataProducao": "2021-10-01T00:00:00",
+    "ProdutoId": 7
+  },
+  {
+    "Id": 8,
+    "Ativo": true,
+    "DataCriacao": "2021-10-10T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Triturador de Plástico Granulado",
+    "Quantidade": 80,
+    "DataProducao": "2021-10-11T00:00:00",
+    "ProdutoId": 8
+  },
+  {
+    "Id": 9,
+    "Ativo": false,
+    "DataCriacao": "2021-11-02T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Fresadora Vertical CNC",
+    "Quantidade": 45,
+    "DataProducao": "2021-11-03T00:00:00",
+    "ProdutoId": 9
+  },
+  {
+    "Id": 10,
+    "Ativo": true,
+    "DataCriacao": "2021-11-25T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Máquina de Reciclagem de Pneus",
+    "Quantidade": 60,
+    "DataProducao": "2021-11-26T00:00:00",
+    "ProdutoId": 10
+  },
+  {
+    "Id": 11,
+    "Ativo": true,
+    "DataCriacao": "2021-12-15T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Furadeira de Coluna 1200mm",
+    "Quantidade": 70,
+    "DataProducao": "2021-12-16T00:00:00",
+    "ProdutoId": 11
+  },
+  {
+    "Id": 12,
+    "Ativo": true,
+    "DataCriacao": "2022-01-10T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Desbaste de Madeira - Combinada",
+    "Quantidade": 55,
+    "DataProducao": "2022-01-11T00:00:00",
+    "ProdutoId": 12
+  },
+  {
+    "Id": 13,
+    "Ativo": false,
+    "DataCriacao": "2022-02-05T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Empilhadeira Elétrica 5000kg",
+    "Quantidade": 40,
+    "DataProducao": "2022-02-06T00:00:00",
+    "ProdutoId": 13
+  },
+  {
+    "Id": 14,
+    "Ativo": true,
+    "DataCriacao": "2022-03-01T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Serra de Madeira com Roldana",
+    "Quantidade": 72,
+    "DataProducao": "2022-03-02T00:00:00",
+    "ProdutoId": 14
+  },
+  {
+    "Id": 15,
+    "Ativo": true,
+    "DataCriacao": "2022-03-20T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Triturador de Vidros para Reciclagem",
+    "Quantidade": 60,
+    "DataProducao": "2022-03-21T00:00:00",
+    "ProdutoId": 15
+  },
+  {
+    "Id": 16,
+    "Ativo": false,
+    "DataCriacao": "2022-04-10T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Furadeira Industrial 1500W",
+    "Quantidade": 25,
+    "DataProducao": "2022-04-11T00:00:00",
+    "ProdutoId": 16
+  },
+  {
+    "Id": 17,
+    "Ativo": true,
+    "DataCriacao": "2022-05-05T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Triturador de Metal 100HP",
+    "Quantidade": 100,
+    "DataProducao": "2022-05-06T00:00:00",
+    "ProdutoId": 17
+  },
+  {
+    "Id": 18,
+    "Ativo": true,
+    "DataCriacao": "2022-06-25T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Cortadora de Madeira 650mm",
+    "Quantidade": 50,
+    "DataProducao": "2022-06-26T00:00:00",
+    "ProdutoId": 18
+  },
+  {
+    "Id": 19,
+    "Ativo": false,
+    "DataCriacao": "2022-07-20T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Recicladora de Papel Descartável",
+    "Quantidade": 35,
+    "DataProducao": "2022-07-21T00:00:00",
+    "ProdutoId": 19
+  },
+  {
+    "Id": 20,
+    "Ativo": true,
+    "DataCriacao": "2022-08-01T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Serra de Corte para Plástico",
+    "Quantidade": 88,
+    "DataProducao": "2022-08-02T00:00:00",
+    "ProdutoId": 20
+  },
+  {
+    "Id": 21,
+    "Ativo": true,
+    "DataCriacao": "2022-09-15T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Serra Tico-Tico Elétrica 500W",
+    "Quantidade": 40,
+    "DataProducao": "2022-09-16T00:00:00",
+    "ProdutoId": 21
+  },
+  {
+    "Id": 22,
+    "Ativo": true,
+    "DataCriacao": "2022-10-05T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Desfibradora para Madeira",
+    "Quantidade": 63,
+    "DataProducao": "2022-10-06T00:00:00",
+    "ProdutoId": 22
+  },
+  {
+    "Id": 23,
+    "Ativo": false,
+    "DataCriacao": "2022-11-02T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Trituradora de Resíduos Eletrônicos",
+    "Quantidade": 55,
+    "DataProducao": "2022-11-03T00:00:00",
+    "ProdutoId": 23
+  },
+  {
+    "Id": 24,
+    "Ativo": true,
+    "DataCriacao": "2022-12-01T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Prensa para Reciclagem de Alumínio",
+    "Quantidade": 70,
+    "DataProducao": "2022-12-02T00:00:00",
+    "ProdutoId": 24
+  },
+  {
+    "Id": 25,
+    "Ativo": true,
+    "DataCriacao": "2022-12-15T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Misturador de Materiais 150L",
+    "Quantidade": 85,
+    "DataProducao": "2022-12-16T00:00:00",
+    "ProdutoId": 25
+  },
+  {
+    "Id": 26,
+    "Ativo": false,
+    "DataCriacao": "2023-01-10T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Lavadora de Alta Pressão",
+    "Quantidade": 30,
+    "DataProducao": "2023-01-11T00:00:00",
+    "ProdutoId": 26
+  },
+  {
+    "Id": 27,
+    "Ativo": true,
+    "DataCriacao": "2023-02-25T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Desfibradora de Madeira de Alta Produção",
+    "Quantidade": 95,
+    "DataProducao": "2023-02-26T00:00:00",
+    "ProdutoId": 27
+  },
+  {
+    "Id": 28,
+    "Ativo": true,
+    "DataCriacao": "2023-03-15T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Triturador de Pneus para Reciclagem",
+    "Quantidade": 60,
+    "DataProducao": "2023-03-16T00:00:00",
+    "ProdutoId": 28
+  },
+  {
+    "Id": 29,
+    "Ativo": false,
+    "DataCriacao": "2023-04-12T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Furadeira de Bancada com Mandril 50mm",
+    "Quantidade": 20,
+    "DataProducao": "2023-04-13T00:00:00",
+    "ProdutoId": 29
+  },
+  {
+    "Id": 30,
+    "Ativo": true,
+    "DataCriacao": "2023-05-30T00:00:00",
+    "DataAlteracao": null,
+    "ProdutoNome": "Moinho de Impacto para Reciclagem",
+    "Quantidade": 78,
+    "DataProducao": "2023-06-01T00:00:00",
+    "ProdutoId": 30
   }
 ]

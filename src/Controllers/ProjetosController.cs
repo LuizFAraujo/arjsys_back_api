@@ -39,7 +39,8 @@ public class ProjetosController(IProjetoService projetoService) : ControllerBase
         var projeto = new Projeto
         {
             Nome = createProjetoDto.Nome,
-            DataInicio = createProjetoDto.DataInicio
+            DataInicio = createProjetoDto.DataInicio,
+            DataFim = createProjetoDto.DataFim
         };
 
         await _projetoService.AddAsync(projeto);
@@ -58,7 +59,8 @@ public class ProjetosController(IProjetoService projetoService) : ControllerBase
         {
             Id = updateProjetoDto.Id,
             Nome = updateProjetoDto.Nome,
-            DataInicio = updateProjetoDto.DataInicio
+            DataInicio = updateProjetoDto.DataInicio,
+            DataFim = updateProjetoDto.DataFim
         };
 
         await _projetoService.UpdateAsync(projeto);

@@ -2,25 +2,271 @@
   {
     "Id": 1,
     "Ativo": true,
-    "DataCriacao": "2024-01-01T00:00:00",
+    "DataCriacao": "2020-09-10T00:00:00",
     "DataAlteracao": null,
-    "Nome": "Projeto 1",
-    "DataInicio": "2024-01-01T00:00:00"
+    "Nome": "Serra Circular de Bancada 350mm",
+    "DataInicio": "2020-09-15T00:00:00",
+    "DataFim": "2021-02-28T00:00:00"
   },
   {
     "Id": 2,
     "Ativo": true,
-    "DataCriacao": "2024-01-02T00:00:00",
+    "DataCriacao": "2021-01-10T00:00:00",
     "DataAlteracao": null,
-    "Nome": "Projeto 2",
-    "DataInicio": "2024-02-01T00:00:00"
+    "Nome": "Desfibradora de Madeira Portátil",
+    "DataInicio": "2021-01-15T00:00:00",
+    "DataFim": "2021-06-30T00:00:00"
   },
   {
     "Id": 3,
-    "Ativo": true,
-    "DataCriacao": "2024-01-03T00:00:00",
+    "Ativo": false,
+    "DataCriacao": "2021-04-20T00:00:00",
     "DataAlteracao": null,
-    "Nome": "Projeto 3",
-    "DataInicio": "2024-03-01T00:00:00"
+    "Nome": "Triturador de Galhos X3",
+    "DataInicio": "2021-04-25T00:00:00",
+    "DataFim": "2021-10-15T00:00:00"
+  },
+  {
+    "Id": 4,
+    "Ativo": true,
+    "DataCriacao": "2021-02-15T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Lixadeira Industrial de Banda",
+    "DataInicio": "2021-02-20T00:00:00",
+    "DataFim": "2021-07-31T00:00:00"
+  },
+  {
+    "Id": 5,
+    "Ativo": true,
+    "DataCriacao": "2021-03-20T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra Fita Vertical 450mm",
+    "DataInicio": "2021-03-25T00:00:00",
+    "DataFim": "2021-08-30T00:00:00"
+  },
+  {
+    "Id": 6,
+    "Ativo": false,
+    "DataCriacao": "2021-05-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Prensa Hidráulica de Reciclagem",
+    "DataInicio": "2021-05-15T00:00:00",
+    "DataFim": "2021-11-30T00:00:00"
+  },
+  {
+    "Id": 7,
+    "Ativo": true,
+    "DataCriacao": "2021-06-05T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Cortadora de Papelão Industrial",
+    "DataInicio": "2021-06-10T00:00:00",
+    "DataFim": "2021-11-15T00:00:00"
+  },
+  {
+    "Id": 8,
+    "Ativo": true,
+    "DataCriacao": "2021-07-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Triturador de Plástico Granulado",
+    "DataInicio": "2021-07-05T00:00:00",
+    "DataFim": "2022-01-15T00:00:00"
+  },
+  {
+    "Id": 9,
+    "Ativo": false,
+    "DataCriacao": "2021-08-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Fresadora Vertical CNC",
+    "DataInicio": "2021-08-15T00:00:00",
+    "DataFim": "2022-02-28T00:00:00"
+  },
+  {
+    "Id": 10,
+    "Ativo": true,
+    "DataCriacao": "2021-09-05T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Máquina de Reciclagem de Pneus",
+    "DataInicio": "2021-09-10T00:00:00",
+    "DataFim": "2022-03-15T00:00:00"
+  },
+  {
+    "Id": 11,
+    "Ativo": true,
+    "DataCriacao": "2021-09-25T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Furadeira de Coluna 1200mm",
+    "DataInicio": "2021-09-30T00:00:00",
+    "DataFim": "2022-04-30T00:00:00"
+  },
+  {
+    "Id": 12,
+    "Ativo": true,
+    "DataCriacao": "2022-01-05T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Desbaste de Madeira - Combinada",
+    "DataInicio": "2022-01-10T00:00:00",
+    "DataFim": "2022-07-15T00:00:00"
+  },
+  {
+    "Id": 13,
+    "Ativo": false,
+    "DataCriacao": "2022-02-25T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Empilhadeira Elétrica 5000kg",
+    "DataInicio": "2022-03-01T00:00:00",
+    "DataFim": "2022-08-15T00:00:00"
+  },
+  {
+    "Id": 14,
+    "Ativo": true,
+    "DataCriacao": "2022-03-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra de Madeira com Roldana",
+    "DataInicio": "2022-03-15T00:00:00",
+    "DataFim": "2022-09-30T00:00:00"
+  },
+  {
+    "Id": 15,
+    "Ativo": true,
+    "DataCriacao": "2022-04-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Triturador de Vidros para Reciclagem",
+    "DataInicio": "2022-04-05T00:00:00",
+    "DataFim": "2022-10-31T00:00:00"
+  },
+  {
+    "Id": 16,
+    "Ativo": false,
+    "DataCriacao": "2022-05-20T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Furadeira Industrial 1500W",
+    "DataInicio": "2022-05-25T00:00:00",
+    "DataFim": "2022-11-15T00:00:00"
+  },
+  {
+    "Id": 17,
+    "Ativo": true,
+    "DataCriacao": "2022-06-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Triturador de Metal 100HP",
+    "DataInicio": "2022-06-15T00:00:00",
+    "DataFim": "2022-12-31T00:00:00"
+  },
+  {
+    "Id": 18,
+    "Ativo": true,
+    "DataCriacao": "2022-07-15T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Cortadora de Madeira 650mm",
+    "DataInicio": "2022-07-20T00:00:00",
+    "DataFim": "2023-01-15T00:00:00"
+  },
+  {
+    "Id": 19,
+    "Ativo": false,
+    "DataCriacao": "2022-08-05T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Recicladora de Papel Descartável",
+    "DataInicio": "2022-08-10T00:00:00",
+    "DataFim": "2023-02-28T00:00:00"
+  },
+  {
+    "Id": 20,
+    "Ativo": true,
+    "DataCriacao": "2022-08-25T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra de Corte para Plástico",
+    "DataInicio": "2022-08-30T00:00:00",
+    "DataFim": "2023-03-15T00:00:00"
+  },
+  {
+    "Id": 21,
+    "Ativo": true,
+    "DataCriacao": "2022-09-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra Tico-Tico Elétrica 500W",
+    "DataInicio": "2022-09-15T00:00:00",
+    "DataFim": "2023-04-30T00:00:00"
+  },
+  {
+    "Id": 22,
+    "Ativo": false,
+    "DataCriacao": "2022-10-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Máquina de Corte de Vidro Temperado",
+    "DataInicio": "2022-10-05T00:00:00",
+    "DataFim": "2023-05-15T00:00:00"
+  },
+  {
+    "Id": 23,
+    "Ativo": true,
+    "DataCriacao": "2022-10-20T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Moinho de Café Industrial",
+    "DataInicio": "2022-10-25T00:00:00",
+    "DataFim": "2023-06-30T00:00:00"
+  },
+  {
+    "Id": 24,
+    "Ativo": true,
+    "DataCriacao": "2022-11-05T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Prensa para Compostagem Orgânica",
+    "DataInicio": "2022-11-10T00:00:00",
+    "DataFim": "2023-07-15T00:00:00"
+  },
+  {
+    "Id": 25,
+    "Ativo": true,
+    "DataCriacao": "2022-12-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Extrusora de Plástico com Múltiplos Moldes",
+    "DataInicio": "2022-12-05T00:00:00",
+    "DataFim": "2023-08-31T00:00:00"
+  },
+  {
+    "Id": 26,
+    "Ativo": false,
+    "DataCriacao": "2023-01-10T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Prensa de Pneus para Reciclagem",
+    "DataInicio": "2023-01-15T00:00:00",
+    "DataFim": "2023-09-15T00:00:00"
+  },
+  {
+    "Id": 27,
+    "Ativo": true,
+    "DataCriacao": "2023-02-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Máquina de Corte de Borracha",
+    "DataInicio": "2023-02-05T00:00:00",
+    "DataFim": "2023-09-30T00:00:00"
+  },
+  {
+    "Id": 28,
+    "Ativo": true,
+    "DataCriacao": "2023-03-15T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Serra de Cinta 700mm",
+    "DataInicio": "2023-03-20T00:00:00",
+    "DataFim": "2023-10-31T00:00:00"
+  },
+  {
+    "Id": 29,
+    "Ativo": false,
+    "DataCriacao": "2023-04-01T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Misturador de Areia e Cimento",
+    "DataInicio": "2023-04-05T00:00:00",
+    "DataFim": "2023-11-15T00:00:00"
+  },
+  {
+    "Id": 30,
+    "Ativo": true,
+    "DataCriacao": "2023-05-20T00:00:00",
+    "DataAlteracao": null,
+    "Nome": "Cortadora de Metal 300mm",
+    "DataInicio": "2023-05-25T00:00:00",
+    "DataFim": "2023-12-31T00:00:00"
   }
 ]
